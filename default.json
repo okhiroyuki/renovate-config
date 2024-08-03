@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":pinVersions",
+    ":maintainLockFilesWeekly",
+    ":enableVulnerabilityAlerts",
+    ":enablePreCommit",
+    ":approveMajorUpdates",
+    ":timezone(Asia/Tokyo)",
+    ":automergeMinor",
+    ":automergeDigest",
+    "packages:vite",
+    "customManagers:dockerfileVersions",
+    "customManagers:githubActionsVersions",
+    "customManagers:makefileVersions",
+    "npm:unpublishSafe",
+    "github>kachick/renovate-config-dprint#1.1.0"
+  ]
+}
