@@ -1,31 +1,31 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"mounts": [
-		"source=node_modules_${devcontainerId},target=${containerWorkspaceFolder}/node_modules,type=volume",
-		"source=pre-commit-cache_${devcontainerId},target=${containerWorkspaceFolder}/.pre-commit-cache,type=volume",
-		"source=npm_${devcontainerId},target=${containerWorkspaceFolder}/.npm,type=volume"
-	],
-	"remoteEnv": {
-		"PRE_COMMIT_HOME": "${containerWorkspaceFolder}/.pre-commit-cache",
-		"npm_config_cache": "${containerWorkspaceFolder}/.npm"
-	},
-	"postAttachCommand": "bash .devcontainer/commands/post-attach.sh",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"streetsidesoftware.code-spell-checker",
-				"usernamehw.errorlens",
-				"github.vscode-github-actions",
-				"GitHub.vscode-pull-request-github",
-				"GitHub.copilot-chat",
-				"GitHub.copilot"
-			]
-		}
-	}
+  "name": "Node.js",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=node_modules_${devcontainerId},target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=pre-commit-cache_${devcontainerId},target=${containerWorkspaceFolder}/.pre-commit-cache,type=volume",
+    "source=npm_${devcontainerId},target=${containerWorkspaceFolder}/.npm,type=volume"
+  ],
+  "remoteEnv": {
+    "PRE_COMMIT_HOME": "${containerWorkspaceFolder}/.pre-commit-cache",
+    "npm_config_cache": "${containerWorkspaceFolder}/.npm"
+  },
+  "postAttachCommand": "bash .devcontainer/commands/post-attach.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.copilot-chat",
+        "GitHub.copilot"
+      ]
+    }
+  }
 }
