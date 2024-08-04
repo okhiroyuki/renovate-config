@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    ":dependencyDashboard",
     ":pinVersions",
     ":maintainLockFilesWeekly",
     ":enableVulnerabilityAlerts",
@@ -11,7 +10,7 @@
     ":timezone(Asia/Tokyo)",
     ":automergeMinor",
     ":automergeDigest",
-    "packages:vite",
+    "group:vite",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
     "customManagers:makefileVersions",
