@@ -32,5 +32,5 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            RENOVATE_CONFIG_FILE=${file} npx --package renovate -c 'renovate-config-validator'
+            RENOVATE_CONFIG_FILE=${file} npx --yes --package renovate -- renovate-config-validator
           done
