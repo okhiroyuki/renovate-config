@@ -1,0 +1,36 @@
+---
+name: renovate
+
+"on":
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  changed_files:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **.json
+          files_ignore: |
+            dprint.json
+            package.json
+            package-lock.json
+      - name: List all changed files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            RENOVATE_CONFIG_FILE=${file} npx --package renovate -c 'renovate-config-validator'
+          done
