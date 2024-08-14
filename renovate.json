@@ -2,6 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>okhiroyuki/renovate-config",
-    "github>okhiroyuki/renovate-config:groupDevcontainer",
+    "github>okhiroyuki/renovate-config:groupDevcontainer"
   ]
 }
