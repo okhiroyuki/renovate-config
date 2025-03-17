@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-22@sha256:896bfba10582c9239d1c36bab53b80af06253019f62b846fa440ee643ca63eb1
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-22@sha256:78fda8c284dd3247d7385d55974e278314233f1acc130ba89757703137dbda45
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         pre-commit \
