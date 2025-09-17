@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "dprint": "0.50.1"
+    "dprint": "0.50.2"
   }
 }
