@@ -16,5 +16,19 @@
     "customManagers:biomeVersions",
     "npm:unpublishSafe",
     "github>kachick/renovate-config-dprint#1.1.0"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "miseタスクのrun文字列に書いたnpmパッケージのバージョン固定を更新する",
+      "fileMatch": [
+        "^mise\\.toml$"
+      ],
+      "matchStrings": [
+        "@opencode/plugin@(?<currentValue>[0-9][0-9.]*)"
+      ],
+      "depNameTemplate": "@opencode/plugin",
+      "datasourceTemplate": "npm"
+    }
   ]
 }
